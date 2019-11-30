@@ -63,8 +63,10 @@ def delete_post(request,post_id):
 
 def delete_comment(request,comment_id):
 	comment=Comment.objects.get(id=int(comment_id))
+	post=comment.post_id
 	comment.delete()
-	return HttpResponseRedirect(reverse_lazy('blog:index'))
+	url=reverse_lazy('blog:redirect') + str(post)
+	return HttpResponseRedirect(url)
 
 def update_post(request,post_id):
 		template="update_post.html"

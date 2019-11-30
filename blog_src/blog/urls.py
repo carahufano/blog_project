@@ -9,4 +9,5 @@ urlpatterns = [
     url(r'^delete_post/(?P<post_id>\d+)$',delete_post, name='delete-post'),
     url(r'^update_post/(?P<post_id>\d+)$',update_post, name='update-post'),
     url(r'^delete_comment/(?P<comment_id>\d+)$',delete_comment, name='delete-comment'),
+    url(r'^view_post/$',delete_comment, name='redirect'),
 ]
