@@ -1,0 +1,21 @@
+{% block sidebar %}
+
+<style>
+        .card{
+            box-shadow: 0 16px 48px #E3E7EB;
+        }
+
+</style>
+
+<!-- Sidebar Widgets Column -->
+<div class="col-md-4 float-right ">
+<div class="card my-4">
+    <div class="card-body">
+        <p class="card-text">Have a new content to publish?</p>
+        <a href="{% url 'blog:add-post' %}"
+           class="btn btn-danger">Add post!</a>
+    </div>
+</div>
+</div>
+
+{% endblock sidebar %}
